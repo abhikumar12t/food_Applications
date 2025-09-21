@@ -186,7 +186,7 @@ nav svg {
   min-height: 80vh;
   justify-content: space-between;
   align-items: center;
-  background: url(/background.svg);
+  background: url(/images/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -882,7 +882,7 @@ footer .container .banner .right {
   padding: 30px 20px;
   justify-content: center;
   align-items: center;
-  background: url(/reserve.svg);
+  background: url(/images/reserve.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
