@@ -12,7 +12,6 @@ p
 node_modules
 .env
 package-lock.json
-package.json
 
 dist
 dist-ssr
