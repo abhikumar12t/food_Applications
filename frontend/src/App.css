@@ -1188,6 +1188,18 @@ footer .container .banner .right {
   position: relative;
   animation: fadeIn 0.3s ease-in-out;
 }
+.popup-details{
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+     display: flex;
+     flex-direction: column;
+    word-spacing: 3px;
+}
+.popup-details span{
+     color: #555;
+}
+
 .details_btn {
   margin-top: 10px;
   padding: 8px 15px;

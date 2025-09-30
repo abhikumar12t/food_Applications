@@ -47,12 +47,14 @@ const Team = () => {
               ✖
             </button>
             <img src={selectedMember.image} alt={selectedMember.name} />
-            <h2>{selectedMember.name}</h2>
-            <p><strong>Designation: </strong> {selectedMember.designation}</p>
-            <p><strong>Speciality: </strong> {selectedMember.speciality}</p>
-            <p><strong>Experience: </strong> {selectedMember.experience}</p>
-            <p><strong>Age: </strong> {selectedMember.age}</p>
-            <p><strong>Ratting: </strong> {selectedMember.ratting} years</p>
+                <div className="popup-details">
+                     <h2 style={{color: '#5e27bcff'}}>{selectedMember.name}</h2>
+            <p><strong>Designation: </strong> <span>{selectedMember.designation}</span></p>
+            <p><strong>Speciality: </strong> <span>{selectedMember.speciality}</span></p>
+            <p><strong>Experience: </strong><span> {selectedMember.experience}</span></p>
+            <p><strong>Age: </strong> <span>{selectedMember.age}</span></p>
+            <p><strong>Ratting: </strong> <span>{selectedMember.ratting}</span></p>
+             </div>
           </div>
         </div>
       )}
