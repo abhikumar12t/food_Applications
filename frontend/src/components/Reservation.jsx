@@ -1,4 +1,3 @@
-import React from "react";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import axios from "axios";
 import { useState } from "react";
@@ -6,6 +5,8 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const Reservation = () => {
+  const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
@@ -18,13 +19,11 @@ const Reservation = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "/api/user/resevation/send",
+        `${API}/api/user/resevation/send`,
         { firstname, lastname, email, phone, date, time },
         {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          withCredentials: true,
+          headers: { "Content-Type": "application/json" },
+          // withCredentials: true, // <-- remove/disable unless you use cookies/sessions
         }
       );
       toast.success(data.message);
@@ -35,11 +34,11 @@ const Reservation = () => {
       setTime("");
       setDate("");
       navigate("/success");
-
-    
     } catch (error) {
-      toast.error(error.response.data.message);
-    }
+  console.error("Reservation error:", error.response?.data || error.message);
+  toast.error(error.response?.data?.message || "Something went wrong");
+}
+
   };
 
   return (
@@ -96,7 +95,7 @@ const Reservation = () => {
                   onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
-              <button type="submit"  onClick={handleReservation}>
+              <button type="submit" onClick={handleReservation}>
                 RESERVE NOW{" "}
                 <span>
                   <HiOutlineArrowNarrowRight />
