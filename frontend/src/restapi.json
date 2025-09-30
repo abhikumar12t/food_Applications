@@ -70,55 +70,52 @@
                 "category": "Dinner"
             }
         ],
+
+        
         "team": [
             {
                 "id": 1,
                 "image": "/images/team_member_1.png",
                 "name": "JOHNATHAN TYLER",
-                "designation": "Founder & Head Chef"
+                "designation": "Founder & Head Chef",
+                "experience": "2 years", 
+                "age":  "53 years old",
+                "speciality": "Indian Cuisine",
+                "ratting": "5.3"
             },
             {
+                 
                 "id": 2,
                 "image": "/images/team_member_2.png",
                 "name": "WADE WARREN",
-                "designation": "Sous Chef"
+                 "experience": "1 years", 
+                "designation": "Sous Chef",
+                "age":  "25 years old",
+                "speciality": "Desserts",
+                "ratting": "4.4"
             },
             {
-                "id": 3,
                 "image": "/images/team_member_3.png",
+                "id": 3,
                 "name": "JHON DOE",
-                "designation": "Fast Food Chef"
+                "designation": "Fast Food Chef",
+                 "speciality": "Grilling",
+                 "experience": "3 years", 
+                 "age":  "23 years old",
+                "ratting": "4.4"
             },
             {
                 "id": 4,
                 "image": "/images/team_member_4.png",
                 "name": "ALEX COAL",
-                "designation": "Senior Chef"
+                "age":  "31 years old",
+                "designation": "Senior Chef",
+                  "speciality": "Baking",
+                 "experience": "8 month", 
+                "ratting": "4.1"
             }
         ],
-        "testimonials": [
-            {
-                "id": 1,
-                "image": "/images/review1.png",
-                "description": "Morbi nulla nec dui lacus, in. Libero in pretium metus massa. Sodales dignissim vitae mauris varius faucibus. Eleifend dui, non laoreet ac luctus facilisis diam. Enim scelerisque vel at id viverra tellus.",
-                "rating": 4,
-                "userName": "Jane Cooper"
-            },
-            {
-                "id": 2,
-                "image": "/images/review2.png",
-                "description": "Tortor vel nunc netus pharetra enim, enim dolor mauris in. Sit nam fringilla in egestas. Libero condimentum quis in vulputate adipiscing venenatis augue. Venenatis faucibus.",
-                "rating": 4.5,
-                "userName": "Esther Howard"
-            },
-            {
-                "id": 3,
-                "image": "/images/review3.png",
-                "description": "Tortor vel nunc netus pharetra enim, enim dolor mauris in. Sit nam fringilla in egestas. Libero condimentum quis in vulputate adipiscing venenatis augue. Venenatis faucibus.",
-                "rating": 5,
-                "userName": "Guy Hawkins"
-            }
-        ],
+        
         "who_we_are": [
             {
                 "id": 1,
@@ -141,6 +138,9 @@
                 "title": "Food Dishes"
             }
         ],
+
+
+
         "navbarLinks": [
             {
                 "id": 1,
