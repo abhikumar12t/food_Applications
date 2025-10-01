@@ -10,13 +10,18 @@ const { errorMeddlewere } = require("./error/error");
 //  Connect DB
 db();
 
-// Middlewares
+// ✅ CORS FIX
 app.use(cors({
-  origin: "https://food-applications.vercel.app",
-  methods: ['POST'],
+  origin: "https://food-applications.vercel.app", // frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // preflight allow
+  allowedHeaders: ["Content-Type", "Authorization"], // headers allow
   credentials: true,
 }));
 
+// ✅ Explicitly handle OPTIONS preflight
+app.options("*", cors());
+
+// Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -24,10 +29,11 @@ app.use('/api/user/resevation', resevationRoutes);
 
 app.use(errorMeddlewere);
 
-
-app.get("/", (req, res, next)=>{return res.status(200).json({
-  success: true,
-  message: "HELLO WORLD AGAIN"
-})})
+app.get("/", (req, res, next) => {
+  return res.status(200).json({
+    success: true,
+    message: "HELLO WORLD AGAIN"
+  });
+});
 
 module.exports = app;
