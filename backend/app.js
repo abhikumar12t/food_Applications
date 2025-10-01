@@ -12,7 +12,7 @@ db();
 
 // Middlewares
 app.use(cors({
-  origin: "https://food-applications.vercel.app/",
+  origin: "https://food-applications.vercel.app",
   methods: ['POST'],
   credentials: true,
 }));
