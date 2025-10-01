@@ -13,9 +13,10 @@ db();
 // Middlewares
 app.use(cors({
   origin: [process.env.FRONTEND_URI],
-  methods: ['POST'],
+  methods: [ 'GET', 'POST'],
   credentials: true,
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
